@@ -23,11 +23,11 @@ async def connect_db():
         tls=True,
         tlsAllowInvalidCertificates=True
     )
-    db.users_collection = db.client.shopping_cart.user
+    db.users_collection = db.client.shopping_cart.users
     db.address_collection = db.client.shopping_cart.address
-    db.product_collection = db.client.shopping_cart.product
-    db.order_collection = db.client.shopping_cart.order
-    db.order_collection = db.client.shopping_cart.order_item
+    db.product_collection = db.client.shopping_cart.products
+    db.order_collection = db.client.shopping_cart.orders
+    db.order_collection = db.client.shopping_cart.order_items
 
 async def disconnect_db():
     db.client.close()
