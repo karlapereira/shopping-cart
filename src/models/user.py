@@ -1,7 +1,5 @@
-from src.schemas.user import UserSchema
 
-
-async def create_user(users_collection, user: UserSchema):
+async def create_user(users_collection, user):
     try:
         user = await users_collection.insert_one(user)
 
@@ -38,7 +36,8 @@ async def update_user(users_collection, user_id, user_data):
         data = {k: v for k, v in user_data.items() if v is not None}
 
         user = await users_collection.update_one(
-            {'_id': user_id}, {'$set': data}
+            {'_id': user_id},
+            {'$set': data}
         )
 
         if user.modified_count:

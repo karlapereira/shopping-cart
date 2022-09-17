@@ -68,12 +68,11 @@ async def users_crud():
         )
 
         print(result)
-
     elif option == '5':
         # pagination
         users = await get_users(
             users_collection,
-            skip=2,
+            skip=0,
             limit=2
         )
         print(users)
