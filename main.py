@@ -1,5 +1,7 @@
-from cruds import start
+import asyncio
+
+from src.controllers.users import users_crud
 
 
-if __name__ == "__main__":
-    start()
+loop = asyncio.get_event_loop()
+loop.run_until_complete(users_crud())
