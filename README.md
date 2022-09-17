@@ -24,7 +24,11 @@ Integração do banco MongoDB para o projeto shopping-cart do LuizaCode
     $ .\venv\Scripts\activate
    ```
 * Install requirements
-    pip install -r requirements.txt
+     ```
+     $ pip install -r requirements.txt
+     ```
 * Run
-  python main.py
+  ```
+  $ python main.py
+   ```
   
